@@ -132,14 +132,21 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => {
   console.log('Connected to MongoDB');
-  server.listen(process.env.PORT, () => {
-    console.log(`Server running on http://localhost:${process.env.PORT}`);
-  });
+  if (process.env.NODE_ENV !== 'production') {
+    server.listen(process.env.PORT, () => {
+      console.log(`Server running on http://localhost:${process.env.PORT}`);
+    });
+  }
 })
 .catch(err => {
   console.error('DB connection failed:', err);
-  process.exit(1);
+  if (process.env.NODE_ENV !== 'production') {
+    process.exit(1);
+  }
 });
+
+// Export app for Vercel
+module.exports = app;
 
 // Graceful shutdown
 process.on('SIGTERM', () => {

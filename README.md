@@ -81,8 +81,8 @@ Todo-task-manager/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Todo-task-manager
+   git clone https://github.com/Kishorek78/To-Do-Application.git
+   cd To-Do-Application
    ```
 
 2. **Install dependencies**
@@ -156,6 +156,37 @@ Todo-task-manager/
 
 ## 🚀 Deployment
 
+### Vercel Deployment (Recommended)
+
+This application is configured for easy deployment on Vercel:
+
+1. **Fork or use this repository**
+   - Go to https://github.com/Kishorek78/To-Do-Application
+   - Fork the repository or use it directly
+
+2. **Deploy to Vercel**
+   - Visit [vercel.com](https://vercel.com)
+   - Sign up/login with your GitHub account
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect the configuration
+
+3. **Environment Variables**
+   Set up these environment variables in Vercel dashboard:
+   ```env
+   MONGO_URI=your-mongodb-atlas-connection-string
+   JWT_SECRET=your-super-secret-jwt-key-here
+   GOOGLE_CLIENT_ID=your-google-client-id
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   NODE_ENV=production
+   ```
+
+4. **Deploy**
+   - Click "Deploy" and Vercel will build and deploy your application
+   - Your app will be available at `https://your-app-name.vercel.app`
+
+### Alternative Deployment Options
+
 ### Backend Deployment
 1. Set up MongoDB Atlas or local MongoDB
 2. Configure environment variables
@@ -163,7 +194,7 @@ Todo-task-manager/
 
 ### Frontend Deployment
 1. Build the project: `npm run build`
-2. Deploy the `dist` folder to platforms like Vercel, Netlify, or GitHub Pages
+2. Deploy the `dist` folder to platforms like Netlify, or GitHub Pages
 
 ## 🔒 Security Features
 
