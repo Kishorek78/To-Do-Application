@@ -1,4 +1,6 @@
 # Todo Task Manager - MERN Stack Application
+“This project is a part of a hackathon run by 
+https://www.katomaran.com
 
 A full-stack task management application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring real-time updates, user authentication, and mobile-responsive design.
 
